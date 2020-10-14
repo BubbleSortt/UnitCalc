@@ -1,0 +1,51 @@
+.expenses {
+  padding-top: 40px;
+
+  &__transcript {
+    max-width: 470px;
+  }
+
+  &__main {
+    margin-top: 80px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    align-items: flex-start;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__spread {
+    .main-form__item {
+      width: 100%;
+    }
+
+    .main-form__row {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__table-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+}
+
+.expenses-table {
+  max-width: 515px;
+  width: 100%;
+  padding-top: 0;
+  margin-bottom: 25px;
+  .main-form__input-wrap {
+    max-width: 170px;
+  }
+
+  .main-form__table-row {
+    max-width: 430px;
+  }
+}

@@ -1,0 +1,178 @@
+.simple {
+  font-family: "Roboto Regular";
+
+  .transcript__info {
+    margin-top: 0;
+  }
+
+  &__churt-rate {
+    margin-top: 40px;
+  }
+
+  &__retention {
+    margin-top: 40px;
+  }
+
+  &__table-list {
+    position: relative;
+    .table-ref {
+      position: absolute;
+      right: 0;
+      top: -20px;
+
+      button {
+        background: #FFFFFF;
+        border: 1px solid #E0E0E0;
+        border-radius: 5px;
+        padding: 5px 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+.common-data {
+
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+
+  //td {
+  //  padding: 10px 5px 10px 12px;
+  //  border: 1px solid #C4C4C4;
+  //}
+
+
+  &__td-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tr {
+    display: flex;
+  }
+
+  &__th {
+    background: #E7ECF6;
+
+    &_benefit {
+      background: #BDDFBE;
+    }
+  }
+
+
+  &__td,
+  &__th {
+    border: 1px solid #C4C4C4;
+    padding: 10px 10px 12px 13px;
+    margin: -1px -1px 0 0;
+  }
+
+  &__th-title {
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 14px;
+  }
+
+  &__td-title {
+    font-size: 13px;
+    margin-bottom: 3px;
+    font-weight: bold;
+  }
+
+
+  &__th-title,
+  &__th-info,
+  &__td-title,
+  &__td-info {
+    color: #4F4F4F;
+  }
+
+  &__th-info,
+  &__td-info {
+    font-size: 11px;
+  }
+
+  &__th-value,
+  &__td-value {
+    font-size: 22px;
+    margin-top: 18px;
+  }
+
+  &__td {
+
+    &_benefit {
+      background: #E8FFF0;
+      border: 1px solid #43DC77;
+    }
+  }
+
+
+}
+
+
+.table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+
+  td {
+    padding: 10px 5px 10px 12px;
+    border: 1px solid #C4C4C4;
+  }
+
+  &__title {
+    color: #262626;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__th {
+    background: #E7ECF6;
+  }
+
+  &__tr {
+
+  }
+
+  &__td {
+    width: 7%;
+
+    &_not-profit {
+      background: #EDDBE1;
+    }
+
+    &_profit {
+      background: #E8FFF0;
+    }
+
+    &_gray {
+      background: #F2F2F2;
+    }
+
+    &_recommendation {
+      background: #F9ECBF;
+    }
+
+    &_title {
+      max-width: 193px;
+      width: 16%;
+    }
+  }
+
+  &__recommendation-title {
+    width: 24%;
+    max-width: 305px;
+  }
+
+  &__recommendation-td {
+    width: 8%;
+  }
+
+  &__recommendation-profit {
+    width: 17%;
+  }
+}

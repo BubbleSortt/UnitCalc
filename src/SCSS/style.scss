@@ -1,0 +1,52 @@
+@import "~normalize.css";
+@import "fonts";
+@import "header";
+@import "main-form";
+@import "CAC";
+@import "COGS";
+@import "expenses";
+@import "simple";
+@import "complex";
+@import "handbook";
+
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 15px;
+}
+
+
+.item-wrapper {
+  width: 25%;
+  padding: 0 10px 50px;
+  @media (max-width: 768px) {
+    width: 33.333%;
+  }
+  @media (max-width: 545px) {
+    width: 50%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+}
+
+.main {
+  &__index,
+  &__simple {
+    padding-top: 30px;
+  }
+
+  &__simple {
+    padding-bottom: 200px;
+  }
+
+}
+

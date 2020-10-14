@@ -1,0 +1,80 @@
+.CAC {
+  position: relative;
+  &__preview {
+    text-align: center;
+  }
+
+  &__transcript {
+    max-width: 740px;
+  }
+
+
+
+}
+
+.CAC-preview {
+
+}
+
+.CAC-form {
+  &__spread {
+    margin-top: 17px;
+    flex-basis: 55%;
+  }
+
+  &__table {
+    margin-left: 14px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    flex-basis: 45%;
+  }
+
+  &__main {
+    display: flex;
+  }
+
+  &__sub {
+    margin-top: 30px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    padding: 15px 20px 30px 20px;
+  }
+
+  &__retention-info {
+    font-size: 13px;
+    color: #8C8C8C;
+    margin-top: 0;
+    margin-bottom: 4px;
+    span {
+      color: #4F4F4F;
+      font-weight: 900;
+    }
+  }
+
+  &__retention-example {
+    font-size: 13px;
+    color: #8C8C8C;
+  }
+
+  &__retention-list {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__retention-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 82px;
+    text-align: center;
+    label {
+      color: #262626;
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    input {
+      text-align: center;
+    }
+  }
+}

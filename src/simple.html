@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+
+        <div class="header__top">
+            <h1 class="header__title">
+                UNITCALC
+            </h1>
+            <span class="header__subtitle">
+                Сервис расчета unit-экономики для вашего стартапа или бизнеса
+            </span>
+        </div>
+
+        <div class="header__nav header-nav">
+            <div class="header-nav__sub-nav">
+                <a class="header-nav__item" href="#">Расчет</a>
+                <a class="header-nav__item" href="./handbook.html">Справочник</a>
+            </div>
+            <div class="header-nav__main-nav">
+                <a class="header-nav__item header-nav__item_active" href="#">Сервис с подпиской</a>
+                <a class="header-nav__item" href="#">Онлайн-магазин</a>
+                <a class="header-nav__item" href="#">Торговая точка</a>
+                <a class="header-nav__item" href="#">Мобильное приложение</a>
+            </div>
+            <div class="header-nav__sub-nav">
+                <a class="header-nav__item" href="./index.html">Сложно</a>
+                <a class="header-nav__item header-nav__item_active" href="#">Просто</a>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="header__hr">
+
+</header>
+<main class="main__simple simple">
+    <div class="container">
+        <form class="main-form" action="">
+            <p class="transcript__info">
+                Для расчета основных показателей unit-экономики вашего проекта внесите ваши данные. <br>
+                Если у вас нет точных значений, то используйте предположения или средние значения по рынку. <br>
+                За расчетный период взят один месяц.
+            </p>
+            <button class="put-demo-data">Заполнить демо-данными</button>
+
+            <div class="simple-form main-form__simple">
+                <div class="main-form__row">
+                    <div class="main-form__item">
+                        <label for="marketing-budget">Рекламный бюджет:</label>
+                        <input class="main-form__input" id="marketing-budget" type="text"
+                               name="marketing-budget" placeholder="р. 200 000">
+                        <span class="main-form__input-info">
+                                    Сколько денег тратим на рекламу
+                                </span>
+                    </div>
+                    <div class="main-form__item main-form__item_invalid">
+                        <label for="click-count">Стоимость клика, CPC:</label>
+                        <input class="main-form__input" id="click-count" type="text"
+                               name="click-count"
+                               placeholder="р. 8">
+                        <span class="main-form__input-info">
+                                    Цена одного клика по рекламе
+                                </span>
+                    </div>
+
+                    <div class="main-form__item">
+                        <label for="conversion-transit-trial">Конверсия переходы/триал, C1:</label>
+                        <input class="main-form__input" id="conversion-transit-trial" type="text"
+                               name="conversion-transit-trial"
+                               placeholder="10%">
+                        <span class="main-form__input-info">
+                                    Сколько % оформляют триал
+                                </span>
+                    </div>
+                    <div class="main-form__item">
+                        <label for="conversion-trial-payment">Конверсия триал/покупка, C2:</label>
+                        <input class="main-form__input" id="conversion-trial-payment" type="text"
+                               name="conversion-trial-payment"
+                               placeholder="10%">
+                        <span class="main-form__input-info">
+                                    Сколько % оформляют триал
+                                </span>
+                    </div>
+                    <div class="main-form__item">
+                        <label for="lifetime">Повторных покупок, Lifetime:</label>
+                        <input class="main-form__input" id="lifetime" type="text" name="lifetime"
+                               placeholder="3,3">
+                        <span class="main-form__input-info">
+                                    Сколько % оформляют триал
+                                </span>
+                    </div>
+                </div>
+                <div class="main-form__row">
+                    <div class="main-form__item">
+                        <label for="average-cost-avp">Средний чек, AvP:</label>
+                        <input class="main-form__input" id="average-cost-avp" type="text"
+                               name="average-cost-avp" placeholder="р. 2500">
+                        <span class="main-form__input-info">
+                            Средний чек (AvP) - это сумма всех покупок делённая на их количество
+                        </span>
+                    </div>
+                    <div class="main-form__item">
+                        <label for="cogs">Затраты на продажу (COGS):</label>
+                        <input class="main-form__input" id="cogs" type="text"
+                               name="cogs"
+                               placeholder="р. 500">
+                        <span class="main-form__input-info">
+                                    Все затраты на обеспечение продажи Себестоимость, доставка, ПО
+                                </span>
+                    </div>
+
+                    <div class="main-form__item">
+                        <label for="provision-payment">Затраты на обеспечение продаж:</label>
+                        <input class="main-form__input" id="provision-payment" type="text"
+                               name="provision-payment"
+                               placeholder="р. 120 000">
+                        <span class="main-form__input-info">
+                                    Зарплата тех, кто обеспечивает продажи (менеджеры, курьеры), доставка, упаковка
+                                </span>
+                    </div>
+                    <div class="main-form__item">
+                        <label for="fix-cogs">Постоянные затраты, fixCOGS:</label>
+                        <input class="main-form__input" id="fix-cogs" type="text"
+                               name="fix-cogs"
+                               placeholder="р. 350 000">
+                        <span class="main-form__input-info">
+                                    Затраты, не зависящие от количества продаж: офис, бухгалтер, команда
+                                </span>
+                    </div>
+                    <div class="main-form__item">
+                        <label for="churn-rate">Отток клиентов, Churn Rate:</label>
+                        <input class="main-form__input" id="churn-rate" type="text" name="churn-rate"
+                               placeholder="30%">
+                        <span class="main-form__input-info">
+                                    Сколько клиентов перестали быть нашими клиентами в новом периоде
+                                </span>
+                    </div>
+                </div>
+            </div>
+            <button class="main-form__submit" type="submit">Расчитать экономику</button>
+        </form>
+
+        <div class="simple__table-list">
+            <div class="table-ref">
+                <button class="button-share">
+                    <img src="./img/share.svg" alt="">
+                </button>
+                <button class="button-download">
+                    <img src="./img/download.svg" alt="">
+                </button>
+            </div>
+            <div class=" simple__common-data">
+                <span class="table__title">Общие данные по экономике:</span>
+                <table class="common-data">
+                    <tr class="common-data__tr">
+                        <td class="common-data__th">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                        <td class="common-data__th">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                        <td class="common-data__th">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                        <td class="common-data__th">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                        <td class="common-data__th">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                        <td class="common-data__th">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                        <td class="common-data__th">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                        <td class="common-data__th common-data__th_benefit">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__th-title">ARPPU:</span>
+                                <span class="common-data__th-info">Средний доход с платящего клиента</span>
+                                <span class="common-data__th-value">р. 5 016</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="common-data__tr">
+                        <td class="common-data__td">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                        <td class="common-data__td">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                        <td class="common-data__td">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                        <td class="common-data__td">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                        <td class="common-data__td">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                        <td class="common-data__td">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                        <td class="common-data__td">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                        <td class="common-data__td common-data__td_benefit">
+                            <div class="common-data__td-wrap">
+                                <span class="common-data__td-title">Количество показов:</span>
+                                <span class="common-data__td-info">Общее число показов рекламы</span>
+                                <span class="common-data__td-value">р. 2 500 000</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="churt-rate simple__churt-rate">
+                <span class="table__title">Расчёт с учетом Churt Rate (Оттока):</span>
+                <table class="table">
+                    <tr class="table__tr">
+                        <td class="table__th table__td_title">Mесяц</td>
+                        <td class="table__th">1</td>
+                        <td class="table__th">2</td>
+                        <td class="table__th">3</td>
+                        <td class="table__th">4</td>
+                        <td class="table__th">5</td>
+                        <td class="table__th">6</td>
+                        <td class="table__th">7</td>
+                        <td class="table__th">8</td>
+                        <td class="table__th">9</td>
+                        <td class="table__th">10</td>
+                        <td class="table__th">11</td>
+                        <td class="table__th">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Средний чек</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Новые клиенты</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Отток, %</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Повторные продажи</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Всего клиентов</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title table__td_gray">Выручка, Revenue</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Прибыль без fixCOGS</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Чистая прибыль</td>
+                        <td class="table__td table__td_not-profit">1</td>
+                        <td class="table__td table__td_profit">2</td>
+                        <td class="table__td table__td_profit">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="retention simple__retention">
+                <span class="table__title">Расчёт по когорте с учётом Retention (Возвращаемости):</span>
+                <table class="table">
+                    <tr class="table__tr">
+                        <td class="table__th table__td_title">Mесяц</td>
+                        <td class="table__th">1</td>
+                        <td class="table__th">2</td>
+                        <td class="table__th">3</td>
+                        <td class="table__th">4</td>
+                        <td class="table__th">5</td>
+                        <td class="table__th">6</td>
+                        <td class="table__th">7</td>
+                        <td class="table__th">8</td>
+                        <td class="table__th">9</td>
+                        <td class="table__th">10</td>
+                        <td class="table__th">11</td>
+                        <td class="table__th">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Средний чек</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Retention, Повторные, %</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Новых клиентов</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Старых клиентов</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Выручка, Revenue</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Прибыль без fixCOGS</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Чистая прибыль</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">1</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">2</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">3</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">4</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">5</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">6</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">7</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">8</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">9</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">10</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">11</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">12</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">9</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                    <tr class="table__tr">
+                        <td class="table__td table__td_title">Всего платящих клиентов</td>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                        <td class="table__td">5</td>
+                        <td class="table__td">6</td>
+                        <td class="table__td">7</td>
+                        <td class="table__td">8</td>
+                        <td class="table__td">1415000</td>
+                        <td class="table__td">10</td>
+                        <td class="table__td">11</td>
+                        <td class="table__td">12</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>

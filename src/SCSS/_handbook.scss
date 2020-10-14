@@ -1,0 +1,110 @@
+.handbook {
+  padding-top: 50px;
+
+  &__nav {
+    max-width: 1115px;
+    margin: 0 auto;
+    font-family: "Roboto Regular";
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+  &__button-nav,
+  &__all-metrics {
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    color: #828282;
+    font-size: 15px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+      background: #e0e0e0;
+      color: #828282;
+    }
+  }
+
+  &__button-nav {
+    padding: 7px;
+    max-width: 34px;
+    width: 100%;
+
+    &_active {
+      color: #fff;
+      background: #2D9CDB;
+    }
+  }
+
+  &__all-metrics {
+    width: auto;
+    max-width: none;
+    padding: 5px 15px;
+  }
+
+  &__list {
+    margin-top: 70px;
+  }
+
+}
+
+.gloss {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #E0E0E0;
+  padding-top: 40px;
+
+  &:first-child {
+    padding-top: 0px;
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  &__half {
+    display: flex;
+    flex-direction: column;
+    &_header {
+      flex-basis: 58%;
+    }
+    &_par {
+      flex-basis: 42%;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-family: "YesevaOne Regular";
+    font-size: 20px;
+    font-weight: 500;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &__abbr {
+    font-family: "YesevaOne Regular";
+    font-size: 30px;
+    color: #333333;
+  }
+
+  &__info {
+    font-family: "Roboto Light", sans-serif;
+    color: #000;
+    font-size: 16px;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &__formula {
+    font-family: "Roboto Medium", sans-serif;
+    color: #000;
+    font-size: 14px;
+    margin-top: 20px;
+    //font-weight: bolder;
+  }
+}
