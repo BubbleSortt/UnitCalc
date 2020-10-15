@@ -8,7 +8,9 @@
     display: flex;
     justify-content: space-between;
 
+  }
 
+  &__metrics {
   }
 
   &__button-nav,
@@ -20,6 +22,7 @@
     background: #fff;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
+    outline: none;
 
     &:hover {
       background: #e0e0e0;
@@ -35,6 +38,11 @@
     &_active {
       color: #fff;
       background: #2D9CDB;
+
+      &:hover {
+        color: #fff;
+        background: #2D9CDB;
+      }
     }
   }
 
@@ -45,7 +53,7 @@
   }
 
   &__list {
-    margin-top: 70px;
+    margin-top: 40px;
   }
 
 }
@@ -57,13 +65,13 @@
   border-bottom: 1px solid #E0E0E0;
   padding-top: 40px;
 
-  &:first-child {
-    padding-top: 0px;
-  }
+  //&:first-child {
+  //  padding-top: 0px;
+  //}
 
-  &:last-child {
-    border: none;
-  }
+  //&:last-child {
+  //  border: none;
+  //}
 
   &__half {
     display: flex;

@@ -3,4 +3,5 @@ import './libs/select2/select2.min.css'
 
 import './SCSS/style.scss'
 import './js/main'
+import './js/handbook'
 

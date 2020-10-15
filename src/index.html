@@ -45,25 +45,23 @@
 
 <main class="main__index" data-complex-calc="true">
     <div class="container">
+        <button class="put-demo-data">Заполнить демо-данными</button>
+        <div class="transcript-wrap">
+            <div class="transcript CAC__transcript">
+                <p>CAC = Все затраты на привлечение нового клиента / Количество новых клиентов = <span
+                        class="transcript__benefit">р. 842</span></p>
+            </div>
+
+            <p class="CAC-preview__info transcript__info">
+                Сначала необходимо определить сколько мы тратим денег на привлечение одного платящего клиента.
+                <br>
+                Эта метрика называется <span>CAC (Customer Acquisition Cost)</span>. В форме ниже
+                внесите те данные, которые вам известны.<br>
+                Остальное сервис постарается посчитать сам или не учтёт.
+            </p>
+        </div>
         <form class="main-form" action="">
             <div class="CAC">
-                <div class="CAC__preview CAC-preview">
-                    <div class="transcript CAC__transcript">
-                        <p>CAC = Все затраты на привлечение нового клиента / Количество новых клиентов = <span
-                                class="transcript__benefit">р. 842</span></p>
-                    </div>
-                    <button class="put-demo-data">Заполнить демо-данными</button>
-
-
-                    <p class="CAC-preview__info transcript__info">
-                        Сначала необходимо определить сколько мы тратим денег на привлечение одного платящего клиента.
-                        <br>
-                        Эта метрика называется <span
-                            >CAC (Customer Acquisition Cost)</span>. В форме ниже
-                        внесите те данные, которые вам известны.<br>
-                        Остальное сервис постарается посчитать сам или не учтёт.
-                    </p>
-                </div>
                 <div class="CAC-form main-form__CAC">
                     <div class="CAC-form__main">
                         <div class="CAC-form__spread">
@@ -415,9 +413,9 @@
                 </div>
                 <hr class="main-form__hr">
             </div>
-
-            <button class="main-form__submit" type="submit">Расчитать экономику</button>
         </form>
+        <button class="main-form__submit" type="submit">Расчитать экономику</button>
+
     </div>
 </main>
 

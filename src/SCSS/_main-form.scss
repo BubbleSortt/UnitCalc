@@ -1,80 +1,6 @@
 .main-form {
-
-  padding-bottom: 100px;
   position: relative;
   font-family: "Roboto Regular";
-
-  .put-demo-data {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border: 1px solid #E0E0E0;
-    background: transparent;
-    color: #828282;
-    font-family: "Roboto Regular";
-    font-size: 14px;
-    padding: 6px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
-  .transcript {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    padding: 15px 13px;
-    position: relative;
-    box-sizing: border-box;
-    text-align: center;
-
-    $border: 1px;
-    background: #fff;
-    background-clip: padding-box;
-    border: solid $border transparent;
-    border-radius: 5px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      margin: -$border;
-      border-radius: inherit;
-      background: linear-gradient(to right, #1890FF, #FC71EE);
-    }
-
-    p {
-      font-family: "Roboto Regular";
-      font-size: 16px;
-      font-weight: 500;
-      margin: 0 auto;
-      color: #262626;
-
-    }
-    &__benefit {
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: 700;
-      color: #1890FF;
-    }
-
-    &__info {
-      margin: 18px auto 0 auto;
-      text-align: center;
-      font-family: "Roboto Regular";
-      font-size: 13px;
-      color: #8C8C8C;
-      line-height: 18px;
-
-      span {
-        color: #4F4F4F;
-        font-weight: bold;
-      }
-    }
-  }
 
   &__row {
     display: flex;
@@ -263,16 +189,7 @@
     background: #D6D6D6;
   }
 
-  &__submit {
-    display: block;
-    margin: 45px auto 0 auto;
-    background: linear-gradient(90deg, #1890FF -21.22%, #FC71EE 117.9%);
-    padding: 14px 30px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-  }
+
 
 
   ///////////******SELECT2******////////////
@@ -306,6 +223,91 @@
     color: #BFBFBF;
   }
 
+}
+
+.put-demo-data {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  border: 1px solid #E0E0E0;
+  background: transparent;
+  color: #828282;
+  font-family: "Roboto Regular";
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.transcript {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px 13px;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+
+  $border: 1px;
+  background: #fff;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: 5px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: linear-gradient(to right, #1890FF, #FC71EE);
+  }
+
+  p {
+    font-family: "Roboto Regular";
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    color: #262626;
+
+  }
+  &__benefit {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    color: #1890FF;
+  }
+
+  &__info {
+    margin: 18px auto 0 auto;
+    text-align: center;
+    font-family: "Roboto Regular";
+    font-size: 13px;
+    color: #8C8C8C;
+    line-height: 18px;
+
+    span {
+      color: #4F4F4F;
+      font-weight: bold;
+    }
+  }
+}
+
+.main-form__submit {
+  display: block;
+  margin: 45px auto 0 auto;
+  background: linear-gradient(90deg, #1890FF -21.22%, #FC71EE 117.9%);
+  font-family: "Roboto Regular";
+  padding: 14px 30px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .select2-dropdown{
